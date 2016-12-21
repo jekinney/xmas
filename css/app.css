@@ -1,0 +1,173 @@
+<style type="text/css">
+@font-face {
+		font-family: "ChristmasFlake";
+		src: url(MerryChristmasFlake.ttf) format("truetype");
+}
+@font-face {
+		font-family: "ChristmasStar";
+		src: url(MerryChristmasStar.ttf) format("truetype");
+}
+body {
+	margin: 0;
+	height: 100%;
+	width: 100%;
+}
+
+.stars-background {
+	background-color: #000;
+	margin: 0;
+}
+
+h1 {
+	position: absolute;
+	top: 30%;
+	left: 30%;
+	font-size: 10rem;
+	color: #fff;
+	z-index: 100;
+}
+#top-lights {
+	margin-top: -15px;
+}
+.merry {
+	z-index: 10;
+	font-family: "ChristmasStar";
+	opacity: 0.5;
+	animation: word-pulse-1 1.5s linear 0s infinite alternate;
+}
+.christmas {
+	z-index: 10;
+	font-family: "ChristmasStar";
+	opacity: 0.5;
+	animation: word-pulse-2 1.5s linear 1.5s infinite alternate;
+}
+.light-string {
+	z-index: 10;
+	position: relative;
+	margin: 0 20px;
+	display: inline-block;
+}
+.light-base {
+	z-index: 10;
+	height: 35px;
+	width: 20px;
+	background-color: #145214;
+	display: block;
+	margin: 0 10px;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+	position: absolute;
+}
+.light-socket {
+	z-index: 10;
+	position: absolute;
+	top: 35px;
+	left: 9px;
+	width: 22px;
+	height: 5px;
+	background-color: #145214;
+}
+.bulb {
+	z-index: 10;
+	height: 50px;
+	width: 18px;
+	display: block;
+	margin: 0 10px;
+	border-bottom-right-radius: 60%;
+	border-bottom-left-radius: 60%;
+	position: absolute;
+	top: 40px;
+	left: 1px;
+	opacity: 0.5;
+}
+
+.light-string-bottom {
+	position: relative;
+	margin-left: 20px;
+	margin-right: 20px;
+	display: inline-block;
+}
+.light-base-bottom {
+	height: 35px;
+	width: 20px;
+	background-color: #145214;
+	display: block;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-bottom: 0;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+.light-socket-bottom {
+	position: absolute;
+	bottom: 35px;
+	left: 10px;
+	width: 22px;
+	height: 5px;
+	background-color: #145214;
+}
+.bulb-bottom {
+	height: 50px;
+	width: 18px;
+	display: block;
+	margin: 0 10px;
+	border-top-right-radius: 60%;
+	border-top-left-radius: 60%;
+	position: absolute;
+	bottom: 40px;
+	left: 1px;
+	opacity: 0.5;
+}
+
+.light-string:nth-child(1n+0) > .bulb, .light-string:nth-child(1n+0) > .bulb-bottom {
+	background-color: rgb(242, 19, 19);
+	opacity: 1;
+	box-shadow: 1px 1px 15px rgb(242, 19, 19), -1px -1px 15px rgb(242, 19, 19);
+	animation: bulb-pulse-1 0.8s linear 0s infinite alternate;
+}
+
+.light-string:nth-child(2n+0) > .bulb, .light-string:nth-child(2n+0) > .bulb-bottom {
+	background-color: rgb(231, 207, 0);
+	opacity: 0.5;
+	box-shadow: none;
+	animation: bulb-pulse-2 0.8s linear 0s infinite alternate;
+}
+
+.light-string:nth-child(3n+0) > .bulb, .light-string:nth-child(3n+0) > .bulb-bottom {
+	background-color: rgb(76, 153, 26);
+	opacity: 0.5;
+	box-shadow: none;
+	animation: bulb-pulse-3 0.8s linear 0.8s infinite alternate;
+}
+
+.light-string:nth-child(4n+0) > .bulb, .light-string:nth-child(4n+0) > .bulb-bottom {
+	background-color: rgb(0, 0, 205);
+	opacity: 0.5;
+	box-shadow: none;
+	animation: bulb-pulse-4 0.8s linear 0s infinite alternate;
+}
+
+@keyframes word-pulse-1 {
+	from {opacity: 0.5; color: #fff}
+	to {opacity: 1; color: rgb(242, 19, 19)}
+}	
+@keyframes word-pulse-2 {
+	from {opacity: 0.5; color: #fff}
+	to {opacity: 1; color: #5CACEE}
+}	
+@keyframes bulb-pulse-1 {
+	from {box-shadow: 1px 1px 15px rgb(242, 19, 19), -1px -1px 15px rgba(242, 19, 19); opacity: 1}
+	to {box-shadow: none; opacity: 0.5}
+}	
+@keyframes bulb-pulse-2 {
+	from {box-shadow: none; opacity: 0.5}
+	to {box-shadow: 1px 1px 15px rgb(231, 207, 0), -1px -1px 15px rgb(231, 207, 0); opacity: 1}
+}	
+@keyframes bulb-pulse-3 {
+	from {box-shadow: none; opacity: 0.5}
+	to {box-shadow: 1px 1px 15px rgb(76, 153, 26), -1px -1px 15px rgb(76, 153, 26); opacity: 1}
+}	
+@keyframes bulb-pulse-4 {
+	from {box-shadow: none; opacity: 0.5}
+	to {box-shadow: 1px 1px 15px rgb(0, 0, 205), -1px -1px 15px rgb(0, 0, 205); opacity: 1}
+}
